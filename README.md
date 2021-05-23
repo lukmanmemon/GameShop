@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# GameZone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an E-commerce web app using React where customers can browse and shop for video games.
+
+
 
 ## Available Scripts
 
