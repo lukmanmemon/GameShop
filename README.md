@@ -2,6 +2,8 @@
 
 This is an E-commerce web app using React where customers can browse and shop for video games.
 
+The app can be viewed at: https://lukmanmemon.github.io/GameShop/
+
 
 
 ## Available Scripts
