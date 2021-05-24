@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# GameShop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an E-commerce web app using React where customers can browse and shop for video games.
+
+The app can be viewed at: https://lukmanmemon.github.io/GameShop/
+
+
 
 ## Available Scripts
 
