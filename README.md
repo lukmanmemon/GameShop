@@ -1,4 +1,4 @@
-# GameZone
+# GameShop
 
 This is an E-commerce web app using React where customers can browse and shop for video games.
 
