@@ -20,7 +20,7 @@ code {
 .same-line {
   display: inline;
   color: darkslateblue;
-  margin: 20px 0px;
+  margin: 20px 20px;
 }
 
 #search-input {
@@ -47,16 +47,25 @@ code {
   font-size: 40px;
 }
 
-#products {
-  background-color: #f5f5f5;
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
+.products {
+  background-color: #f5f5f5;
 }
 
 #product {
   display: inline-block;
   margin: 50px;
-  text-align: center;
-  
+  text-align: center; 
+}
+
+#product-image:hover {
+  transition: transform .5s;
+  transform: scale(1.05);
 }
 
 #stepper-input {
@@ -68,6 +77,10 @@ code {
   color: white;
   padding: 8px 20px;
   margin-top: 10px;
+}
+
+#add-button:hover {
+  background-color: blue;
 }
 
 #page-footer {
