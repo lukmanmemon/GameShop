@@ -38,7 +38,7 @@ class App extends React.Component {
       <div>
         <Header total={this.state.total}/>
         <BrowserRouter>
-            <Route path="/cart" component={Cart}/>
+            <Route path="/GameShop/cart" component={Cart}/>
         </BrowserRouter>
         <div className="container">
           <div className="products">
