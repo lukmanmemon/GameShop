@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 import 'font-awesome/css/font-awesome.min.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 import nba_image from "./media/nba-2k21.jpg";
 import spiderman_image from "./media/spider-man.jpg";
@@ -23,14 +23,13 @@ import ascreed_image from "./media/assassins-creed.jpg";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { total: 0};
-    this.ChildElement = Array(9).fill(0).map(() => React.createRef());
+    this.state = { total: 0 };
+    this.addToCart = this.addToCart.bind(this);
   }
 
-  addToCart = () => {
-    const childelement = this.ChildElement.current;
+  addToCart = (price) => {
     this.setState((state) => ({
-        total: state.total + childelement.props.price
+        total: state.total + price
     }));
   }
 
@@ -38,20 +37,20 @@ class App extends React.Component {
     return (
       <div>
         <Header total={this.state.total}/>
-        <Router>
-          <Route path={"/cart"} component={Cart} />
-        </Router>
+        <BrowserRouter>
+            <Route path="/cart" component={Cart}/>
+        </BrowserRouter>
         <div className="container">
           <div className="products">
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={nba_image} name="NBA 2K21" price={20}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={spiderman_image} name="Spider-Man" price={45}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={minecraft_image} name="Minecraft Starter Collection" price={40}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={nhl_image} name="NHL 21" price={26}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={avengers_image} name="Marvel's Avengers" price={40}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={overwatch_image} name="Overwatch Origins Edition" price={35}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={lbp_image} name="Little Big Planet 3" price={20}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={nfs_image} name="NFS Heat" price={55}/>
-            <Products ref={this.ChildElement} addToCart={this.addToCart.bind(this)} image={ascreed_image} name="Assassin's Creed Origins" price={30}/>
+            <Products addToCart={this.addToCart} image={nba_image} name="NBA 2K21" price={20}/>
+            <Products addToCart={this.addToCart} image={spiderman_image} name="Spider-Man" price={45}/>
+            <Products addToCart={this.addToCart} image={minecraft_image} name="Minecraft Starter Collection" price={40}/>
+            <Products addToCart={this.addToCart} image={nhl_image} name="NHL 21" price={26}/>
+            <Products addToCart={this.addToCart} image={avengers_image} name="Marvel's Avengers" price={40}/>
+            <Products addToCart={this.addToCart} image={overwatch_image} name="Overwatch Origins Edition" price={35}/>
+            <Products addToCart={this.addToCart} image={lbp_image} name="Little Big Planet 3" price={20}/>
+            <Products addToCart={this.addToCart} image={nfs_image} name="NFS Heat" price={55}/>
+            <Products addToCart={this.addToCart} image={ascreed_image} name="Assassin's Creed Origins" price={30}/>
           </div>
         </div>
         <Footer />

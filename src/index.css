@@ -20,7 +20,7 @@ code {
 .same-line {
   display: inline;
   color: darkslateblue;
-  margin: 20px 20px;
+  margin: 25px 20px;
 }
 
 #search-input {
@@ -43,8 +43,16 @@ code {
   background-color: white;
   color: darkslateblue;
   border: none;
-  margin-left: 50px;
   font-size: 40px;
+}
+
+#cart-content {
+  text-align: center;
+  margin: 50px 0px;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
 
 .sticky {
