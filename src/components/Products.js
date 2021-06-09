@@ -6,22 +6,19 @@ export class Products extends React.Component {
         super();
         this.state = {
             buttonColor: "",
-            textColor: "",
-            content: ""
+            textColor: ""
         }
     }
 
     buttonClicked = () => {
         this.setState({
             buttonColor: "yellow",
-            textColor: "black",
-            content: "ADDED!"
+            textColor: "black"
         });
         setTimeout(function() {
             this.setState({
                 buttonColor: "",
                 textColor: "",
-                content: ""
             });
         }.bind(this), 2000);
     }
@@ -40,7 +37,7 @@ export class Products extends React.Component {
                 <h5 id="product-name">{this.props.name}</h5>
                 <p id="product-price"> ${this.props.price}.00</p>
                 <div id="product-action">
-                    <button id="add-button" style={{backgroundColor: this.state.buttonColor, color: this.state.textColor, text: this.state.content}} onClick={this.buttonAction}>ADD TO CART</button>
+                    <button id="add-button" style={{backgroundColor: this.state.buttonColor, color: this.state.textColor}} onClick={this.buttonAction}>ADD TO CART</button>
                 </div>
             </div>
         );

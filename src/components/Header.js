@@ -17,7 +17,8 @@ export class Header extends React.Component {
                         <input type="text" placeholder="Search for game" name="search" id="search-input"></input>
                         <button id="search-button"><i className="fa fa-search"></i></button>
                     </div>
-                    <p className="same-line" id="total">Total: ${this.props.total}.00</p>
+                    <p className="same-line" id="totalLabel">Total: </p>
+                    <p className="same-line" id="total">${this.props.total}.00</p>
                     <button className="same-line" id="cart-button" ><i className="fa fa-shopping-cart"></i></button>
                 </header>
             </div> 

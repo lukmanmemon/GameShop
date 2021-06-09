@@ -40,8 +40,8 @@ class App extends React.Component {
         <BrowserRouter>
             <Route path="/GameShop/cart" component={Cart}/>
         </BrowserRouter>
-        <div className="container">
-          <div className="products">
+        <div className="products">
+          <div className="container">
             <Products addToCart={this.addToCart} image={nba_image} name="NBA 2K21" price={20}/>
             <Products addToCart={this.addToCart} image={spiderman_image} name="Spider-Man" price={45}/>
             <Products addToCart={this.addToCart} image={minecraft_image} name="Minecraft Starter Collection" price={40}/>

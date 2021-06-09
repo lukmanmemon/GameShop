@@ -39,6 +39,15 @@ code {
   margin-right: 90px;
 }
 
+#total {
+  margin-left: 0px;
+  font-weight: bold;
+}
+
+#totalLabel {
+  margin-right: 0px;
+}
+
 #cart-button {
   background-color: white;
   color: darkslateblue;
