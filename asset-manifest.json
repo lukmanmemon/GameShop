@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/GameShop/static/css/main.89cfcbc1.chunk.css",
+    "main.js": "/GameShop/static/js/main.561c2713.chunk.js",
+    "main.js.map": "/GameShop/static/js/main.561c2713.chunk.js.map",
+    "runtime-main.js": "/GameShop/static/js/runtime-main.7388864b.js",
+    "runtime-main.js.map": "/GameShop/static/js/runtime-main.7388864b.js.map",
+    "static/css/2.077f71da.chunk.css": "/GameShop/static/css/2.077f71da.chunk.css",
+    "static/js/2.3c17c419.chunk.js": "/GameShop/static/js/2.3c17c419.chunk.js",
+    "static/js/2.3c17c419.chunk.js.map": "/GameShop/static/js/2.3c17c419.chunk.js.map",
+    "index.html": "/GameShop/index.html",
+    "static/css/2.077f71da.chunk.css.map": "/GameShop/static/css/2.077f71da.chunk.css.map",
+    "static/css/main.89cfcbc1.chunk.css.map": "/GameShop/static/css/main.89cfcbc1.chunk.css.map",
+    "static/js/2.3c17c419.chunk.js.LICENSE.txt": "/GameShop/static/js/2.3c17c419.chunk.js.LICENSE.txt",
+    "static/media/assassins-creed.8203eddd.jpg": "/GameShop/static/media/assassins-creed.8203eddd.jpg",
+    "static/media/avengers.b4bed3f2.jpg": "/GameShop/static/media/avengers.b4bed3f2.jpg",
+    "static/media/font-awesome.min.css": "/GameShop/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/little-big-planet.0fdc2e1d.jpg": "/GameShop/static/media/little-big-planet.0fdc2e1d.jpg",
+    "static/media/minecraft.f356caee.jpg": "/GameShop/static/media/minecraft.f356caee.jpg",
+    "static/media/nba-2k21.ee2c3fe4.jpg": "/GameShop/static/media/nba-2k21.ee2c3fe4.jpg",
+    "static/media/nfs-heat.800ac3db.jpg": "/GameShop/static/media/nfs-heat.800ac3db.jpg",
+    "static/media/nhl-21.d04c0407.jpg": "/GameShop/static/media/nhl-21.d04c0407.jpg",
+    "static/media/overwatch.61244ae8.jpg": "/GameShop/static/media/overwatch.61244ae8.jpg",
+    "static/media/spider-man.58142340.jpg": "/GameShop/static/media/spider-man.58142340.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7388864b.js",
+    "static/css/2.077f71da.chunk.css",
+    "static/js/2.3c17c419.chunk.js",
+    "static/css/main.89cfcbc1.chunk.css",
+    "static/js/main.561c2713.chunk.js"
+  ]
+}
