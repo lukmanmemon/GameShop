@@ -39,6 +39,15 @@ code {
   margin-right: 90px;
 }
 
+#totalLabel {
+  margin-right: 0;
+}
+
+#total {
+  font-weight: bold;
+  margin-left: 0;
+}
+
 #cart-button {
   background-color: white;
   color: darkslateblue;
@@ -74,10 +83,6 @@ a:hover {
 #product-image:hover {
   transition: transform .5s;
   transform: scale(1.05);
-}
-
-#stepper-input {
-  width: 80px;
 }
 
 #add-button {
