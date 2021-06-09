@@ -24,10 +24,10 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = { total: 0 };
-    this.sumOfTotal = this.sumOfTotal.bind(this);
+    this.addToCart = this.addToCart.bind(this);
   }
 
-  sumOfTotal = (price) => {
+  addToCart = (price) => {
     this.setState((state) => ({
         total: state.total + price
     }));
@@ -40,17 +40,17 @@ class App extends React.Component {
         <BrowserRouter>
             <Route path="/GameShop/cart" component={Cart}/>
         </BrowserRouter>
-        <div className="products">
-          <div className="container">
-            <Products sumOfTotal={this.sumOfTotal} image={nba_image} name="NBA 2K21" price={20}/>
-            <Products sumOfTotal={this.sumOfTotal} image={spiderman_image} name="Spider-Man" price={45}/>
-            <Products sumOfTotal={this.sumOfTotal} image={minecraft_image} name="Minecraft Starter Collection" price={40}/>
-            <Products sumOfTotal={this.sumOfTotal} image={nhl_image} name="NHL 21" price={26}/>
-            <Products sumOfTotal={this.sumOfTotal} image={avengers_image} name="Marvel's Avengers" price={40}/>
-            <Products sumOfTotal={this.sumOfTotal} image={overwatch_image} name="Overwatch Origins Edition" price={35}/>
-            <Products sumOfTotal={this.sumOfTotal} image={lbp_image} name="Little Big Planet 3" price={20}/>
-            <Products sumOfTotal={this.sumOfTotal} image={nfs_image} name="NFS Heat" price={55}/>
-            <Products sumOfTotal={this.sumOfTotal} image={ascreed_image} name="Assassin's Creed Origins" price={30}/>
+        <div className="container">
+          <div className="products">
+            <Products addToCart={this.addToCart} image={nba_image} name="NBA 2K21" price={20}/>
+            <Products addToCart={this.addToCart} image={spiderman_image} name="Spider-Man" price={45}/>
+            <Products addToCart={this.addToCart} image={minecraft_image} name="Minecraft Starter Collection" price={40}/>
+            <Products addToCart={this.addToCart} image={nhl_image} name="NHL 21" price={26}/>
+            <Products addToCart={this.addToCart} image={avengers_image} name="Marvel's Avengers" price={40}/>
+            <Products addToCart={this.addToCart} image={overwatch_image} name="Overwatch Origins Edition" price={35}/>
+            <Products addToCart={this.addToCart} image={lbp_image} name="Little Big Planet 3" price={20}/>
+            <Products addToCart={this.addToCart} image={nfs_image} name="NFS Heat" price={55}/>
+            <Products addToCart={this.addToCart} image={ascreed_image} name="Assassin's Creed Origins" price={30}/>
           </div>
         </div>
         <Footer />
