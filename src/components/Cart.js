@@ -1,13 +1,14 @@
 import React from 'react';
-import empty_image from '../media/empty-cart.png';
+import empty_image from '../media/empty-cart-image.png';
+
 
 export class Cart extends React.Component {
     render() {
         return(
-            <div id="cart-content">
-                <img src={empty_image} alt="empty cart"></img>
-                <h5>Your cart is empty!</h5>
+            <div id="cart-section">
+                <img src={empty_image} alt="empty cart" className="cart-content"></img>
             </div>
+
 
         );
     }

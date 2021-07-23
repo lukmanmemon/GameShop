@@ -20,7 +20,7 @@ export class Products extends React.Component {
                 buttonColor: "",
                 textColor: "",
             });
-        }.bind(this), 2000);
+        }.bind(this), 1000);
     }
 
     buttonAction = () => {

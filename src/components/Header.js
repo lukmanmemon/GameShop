@@ -1,28 +1,28 @@
-import React from 'react';
+import React from "react";
+import { Link } from 'react-router-dom';
 
-
-export class Header extends React.Component {
-
-    render() { 
+export const Header = (props) => {
         return (
             <div className="sticky">
                 <header id="page-header">
-                    <a href="/GameShop"><h1 className="same-line" id="store-name">GameZone</h1></a>
+                    <Link to="/Gameshop" style={{ textDecoration: 'none' }}><h1 className="same-line" id="store-name">GameZone</h1></Link>
                     <div id="categories" className="same-line">
-                        <a href="/GameShop" className="same-line">PS4</a>
-                        <a href="/GameShop/xbox" className="same-line">Xbox One</a>
-                        <a href="/GameShop/nintendo" className="same-line">Nintendo Switch</a>
+                        <Link to="/GameShop" style={{ textDecoration: 'none' }} className="same-line">PS4</Link>
+                        <Link to="/GameShop/xbox" style={{ textDecoration: 'none' }} className="same-line">Xbox One</Link>
+                        <Link to="/GameShop/nintendo" style={{ textDecoration: 'none' }} className="same-line">Nintendo Switch</Link>
                     </div>
-                    <div className="same-line" id="search-section">
-                        <input type="text" placeholder="Search for game" name="search" id="search-input"></input>
-                        <button id="search-button"><i className="fa fa-search"></i></button>
-                    </div>
+                    <div className="same-line" id="cart-total">
                     <p className="same-line" id="totalLabel">Total: </p>
-                    <p className="same-line" id="total">${this.props.total}.00</p>
-                    <button className="same-line" id="cart-button" ><i className="fa fa-shopping-cart"></i></button>
-                </header>
+                    <p className="same-line" id="total">${props.total}.00</p>
+                    <Link to="/Gameshop/cart" href="/Gameshop/cart">
+                        <button className="same-line" id="cart-button"><i className="fa fa-shopping-cart"></i></button>
+                    </Link>
+                    </div>
+                </header> 
             </div> 
         );
-    }
     
 }
+
+
+
