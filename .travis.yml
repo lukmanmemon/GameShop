@@ -16,4 +16,4 @@ deploy:
   cleanup: true
   github-token: $GITHUB_TOKEN
   on:
-  repo: lukmanmemon/GameShop
+  all_branches: true
