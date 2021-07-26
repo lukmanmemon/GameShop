@@ -1,4 +1,5 @@
-# GameShop
+# GameShop [![Build Status](https://www.travis-ci.com/lukmanmemon/GameShop.svg?branch=main)](https://www.travis-ci.com/lukmanmemon/GameShop)
+
 
 This is an E-commerce web app using React where customers can browse and shop for video games.
 
