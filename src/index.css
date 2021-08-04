@@ -14,6 +14,7 @@ code {
 
 #page-header {
   background-color: white;
+  height: 115px;
 }
 
 .same-line {
@@ -31,7 +32,7 @@ code {
   margin-left: 5%;
 }
 
-#cart-total {
+#header-total {
   margin-left: 30%;
 }
 
@@ -54,14 +55,18 @@ code {
 #cart-section-empty {
   background-color: #f5f5f5;
   text-align: center;
+  min-height: calc(100vh - 215px);
 }
 
 #cart-section-filled {
   background-color: #f5f5f5;
+  min-height: calc(100vh - 215px);
 }
 
 #cart-section-title {
   margin-left: 20px;
+  padding-top: 10px;
+  
 }
 
 .cart-content {
@@ -70,11 +75,37 @@ code {
 
 #cart-item {
   border-bottom: 1px solid #b1b0b0;
+  position: relative;
+}
+
+#product-price {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
 }
 
 #remove-button {
   border: none;
-  float: right;
+  position: absolute;
+  bottom: 40%;
+  right: 0%;
+  
+}
+
+#total-cart {
+  margin-left: 0px;
+  font-weight: bold;
+  display: inline;
+
+}
+
+#total-label-cart {
+  margin-right: 0px;
+  display: inline;
+}
+
+#cart-total {
+  padding: 7% 0%;
 }
 
 .sticky {
@@ -117,5 +148,6 @@ code {
   background-color: lightgray;
   text-align: center;
   width: 100%;
+  height: 100px;
   padding: 30px;
 }

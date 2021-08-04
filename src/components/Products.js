@@ -1,13 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export class Products extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            buttonColor: "",
-            textColor: ""
-        }
+
+    state = {
+        buttonColor: "",
+        textColor: ""
     }
 
     buttonClicked = () => {
@@ -35,7 +32,7 @@ export class Products extends React.Component {
                     <img src={this.props.image} alt="Video game" width="200" height="250"></img>
                 </div>
                 <h5 id="product-name">{this.props.name}</h5>
-                <p > ${this.props.price}.00</p>
+                <p> ${this.props.price}.00</p>
                 <div id="product-action">
                     <button id="add-button" style={{backgroundColor: this.state.buttonColor, color: this.state.textColor}} onClick={this.buttonAction}>Add to Cart</button>
                 </div>
@@ -43,7 +40,3 @@ export class Products extends React.Component {
         );
     }
 }
-
-Products.propTypes = {
-    price: PropTypes.number
-};
