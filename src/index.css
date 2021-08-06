@@ -78,6 +78,10 @@ code {
   position: relative;
 }
 
+#stepper-input {
+  width: 5%;
+}
+
 #product-price {
   position: absolute;
   bottom: 0%;

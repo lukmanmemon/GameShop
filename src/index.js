@@ -11,31 +11,36 @@ import 'font-awesome/css/font-awesome.min.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-
 export class App extends React.Component {
 
-    state = {  
-      total: 0,
-      items: []
-    };
+  state = {  
+    total: 0,
+    items: [],
+    numOfItems: 0
+  };
   
   addToCart = (image, name, price) => {    
-    let id = 0;
-    id++;
-    
-    this.setState((state) => ({
+    let newItems = [...this.state.items, {image, name, price}];
+    let uniqueItems = new Set(this.state.items.map(item => item.name));
+
+    if (uniqueItems.size === this.state.items.length) {
+      this.setState((state) => ({
         total: state.total + price,
-        items: [...state.items, {image, name, price, id}]
-    }));
+        items: newItems,
+        numOfItems: state.items.length + 1
+      }));
+    }
+    
     
   }
 
   removeFromCart = (itemToDelete, price) => {
-    const newItems = this.state.items.filter((item => item.name !== itemToDelete));
+    let newItems = this.state.items.filter((item => item.name !== itemToDelete));
     
     this.setState((state) => ({
       total: state.total - price,
-      items: newItems
+      items: newItems,
+      numOfItems: state.items.length - 1
     }));
   }
   
@@ -43,7 +48,7 @@ export class App extends React.Component {
     return (
       <div>
         <HashRouter>
-            <Header class="container" total={this.state.total}/>
+            <Header class="container" total={this.state.total} numOfItems={this.state.numOfItems}/>
             <Route exact path="/">
               <Playstation addToCart={this.addToCart}/>
             </Route>

@@ -6,6 +6,11 @@ export class Cart extends React.Component {
     removeAction = (product) => {
         this.props.removeFromCart(product.name, product.price);
     }
+
+    updateAction = (product) => {
+        let quantity = this.value;
+        product.price = product.price * quantity;
+    }
     
     render() {
         if (this.props.cartItems.length === 0) {
@@ -27,6 +32,7 @@ export class Cart extends React.Component {
                             <h5 className="same-line-cart">{item.name}</h5>
                             <h5 id="product-price">${item.price}.00</h5>
                             <button className="same-line-cart" id="remove-button" onClick={() => this.removeAction(item)}><i className="fa fa-trash"></i></button>
+                            <input id="stepper-input" type="number" min="1" max="99" onClick={() => this.updateAction(item)}></input>
                         </div>
                         )
                     })}

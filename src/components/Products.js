@@ -20,9 +20,9 @@ export class Products extends React.Component {
         }.bind(this), 500);
     }
 
-    buttonAction = () => {
+    addAction = () => {
         this.buttonClicked();
-        this.props.addToCart(this.props.image, this.props.name, this.props.price, this.props.id);
+        this.props.addToCart(this.props.image, this.props.name, this.props.price);
     }
 
     render() {
@@ -34,7 +34,7 @@ export class Products extends React.Component {
                 <h5 id="product-name">{this.props.name}</h5>
                 <p> ${this.props.price}.00</p>
                 <div id="product-action">
-                    <button id="add-button" style={{backgroundColor: this.state.buttonColor, color: this.state.textColor}} onClick={this.buttonAction}>Add to Cart</button>
+                    <button id="add-button" style={{backgroundColor: this.state.buttonColor, color: this.state.textColor}} onClick={this.addAction}>Add to Cart</button>
                 </div>
             </div>
         );
