@@ -15,15 +15,15 @@ export const Playstation = (props) => {
     return (
         <div className="products">
         <div className="container">
-            <Products addToCart={props.addToCart} image={nba_image} name="NBA 2K21" price={20}/>
-            <Products addToCart={props.addToCart} image={spiderman_image} name="Spider-Man" price={45}/>
-            <Products addToCart={props.addToCart} image={minecraft_image} name="Minecraft Starter Collection" price={40}/>
-            <Products addToCart={props.addToCart} image={nhl_image} name="NHL 21" price={26}/>
-            <Products addToCart={props.addToCart} image={avengers_image} name="Marvel's Avengers" price={40}/>
-            <Products addToCart={props.addToCart} image={overwatch_image} name="Overwatch Origins Edition" price={35}/>
-            <Products addToCart={props.addToCart} image={lbp_image} name="Little Big Planet 3" price={20}/>
-            <Products addToCart={props.addToCart} image={nfs_image} name="NFS Heat" price={55}/>
-            <Products addToCart={props.addToCart} image={ascreed_image} name="Assassin's Creed Origins" price={30}/>
+            <Products addToCart={props.addToCart} image={nba_image} name="NBA 2K21" price={20} id={0} quantity={0}/>
+            <Products addToCart={props.addToCart} image={spiderman_image} name="Spider-Man" price={45} id={1} quantity={0}/>
+            <Products addToCart={props.addToCart} image={minecraft_image} name="Minecraft Starter Collection" price={40} id={2} quantity={0}/>
+            <Products addToCart={props.addToCart} image={nhl_image} name="NHL 21" price={26} id={3} quantity={0}/>
+            <Products addToCart={props.addToCart} image={avengers_image} name="Marvel's Avengers" price={40} id={4} quantity={0}/>
+            <Products addToCart={props.addToCart} image={overwatch_image} name="Overwatch Origins Edition" price={35} id={5} quantity={0}/>
+            <Products addToCart={props.addToCart} image={lbp_image} name="Little Big Planet 3" price={20} id={6} quantity={0}/>
+            <Products addToCart={props.addToCart} image={nfs_image} name="NFS Heat" price={55} id={7} quantity={0}/>
+            <Products addToCart={props.addToCart} image={ascreed_image} name="Assassin's Creed Origins" price={30} id={8} quantity={0}/>
         </div>
         </div>
     );

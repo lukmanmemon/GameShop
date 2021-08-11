@@ -21,8 +21,10 @@ export class Products extends React.Component {
     }
 
     addAction = () => {
+        let updatedQuantity = this.props.quantity + 1;
+
         this.buttonClicked();
-        this.props.addToCart(this.props.image, this.props.name, this.props.price);
+        this.props.addToCart(this.props.image, this.props.name, this.props.price, this.props.id, updatedQuantity);
     }
 
     render() {

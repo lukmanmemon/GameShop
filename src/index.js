@@ -19,29 +19,52 @@ export class App extends React.Component {
     numOfItems: 0
   };
   
-  addToCart = (image, name, price) => {    
-    let newItems = [...this.state.items, {image, name, price}];
-    let uniqueItems = new Set(this.state.items.map(item => item.name));
+  addToCart = (image, name, price, id, quantity) => {    
+    let newItems = [...this.state.items, {image, name, price, id, quantity}];
+    let uniqueItems = new Set(newItems.map(item => item.id));
 
-    if (uniqueItems.size === this.state.items.length) {
+    if (uniqueItems.size === newItems.length) {
       this.setState((state) => ({
         total: state.total + price,
         items: newItems,
-        numOfItems: state.items.length + 1
+        numOfItems: state.numOfItems + 1
       }));
     }
-    
-    
   }
 
-  removeFromCart = (itemToDelete, price) => {
-    let newItems = this.state.items.filter((item => item.name !== itemToDelete));
+  removeFromCart = (itemToDelete, price, quantity) => {
+    let newItems = this.state.items.filter((item => item.id !== itemToDelete));
     
     this.setState((state) => ({
-      total: state.total - price,
+      total: state.total - price * quantity,
       items: newItems,
-      numOfItems: state.items.length - 1
+      numOfItems: state.numOfItems - quantity
     }));
+  }
+
+  increaseQuantity = (id, price) => {
+    let updatedItems = this.state.items;
+    updatedItems.forEach((item, quantity) => item.id === id ? item.quantity += 1 : quantity);
+
+    this.setState((state) => ({
+      total: state.total + price,
+      items: updatedItems,
+      numOfItems: state.numOfItems + 1
+    }));
+    
+    console.log(this.state.items);
+  }
+
+  decreaseQuantity = (id, price) => {
+    let updatedItems = this.state.items;
+    updatedItems.forEach((item, quantity) => item.id === id ? item.quantity -= 1 : quantity);
+
+    this.setState((state) => ({
+      items: updatedItems,
+      total: state.total - price,
+      numOfItems: state.numOfItems - 1
+    }));
+    console.log(this.state.items);
   }
   
   render() {
@@ -59,7 +82,7 @@ export class App extends React.Component {
               <Nintendo addToCart={this.addToCart}/>
             </Route>
             <Route exact path="/cart">
-              <Cart cartItems={this.state.items} total={this.state.total} removeFromCart={this.removeFromCart}/>
+              <Cart cartItems={this.state.items} total={this.state.total} quantity={this.state.quantity} removeFromCart={this.removeFromCart} increaseQuantity={this.increaseQuantity} decreaseQuantity={this.decreaseQuantity}/>
             </Route>
         </HashRouter>
         <Footer />
