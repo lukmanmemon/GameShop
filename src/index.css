@@ -81,20 +81,23 @@ code {
 }
 
 #quantity-section {
-  display: inline;
+  position: absolute;
+  bottom: 45%;
+  right: 5%;
 }
 
 .stepper-input {
-  width: 4%;
-  text-align: right;
+  width: 15%;
+  text-align: center;
 }
 
 .quantity-button {
   background-color: #f5f5f5;
   font-weight: bold;
   border-color: darkgrey;
-  border-radius: 50%;
+  border-radius: 30px;
   margin: 5px 5px;
+  min-width: 30px;
 }
 
 

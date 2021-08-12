@@ -12,7 +12,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export class App extends React.Component {
-
+  
   state = {  
     total: 0,
     items: [],
@@ -29,6 +29,9 @@ export class App extends React.Component {
         items: newItems,
         numOfItems: state.numOfItems + 1
       }));
+    }
+    else {
+      this.increaseQuantity(id, price);
     }
   }
 
@@ -50,9 +53,7 @@ export class App extends React.Component {
       total: state.total + price,
       items: updatedItems,
       numOfItems: state.numOfItems + 1
-    }));
-    
-    console.log(this.state.items);
+    }));    
   }
 
   decreaseQuantity = (id, price) => {
@@ -64,7 +65,6 @@ export class App extends React.Component {
       total: state.total - price,
       numOfItems: state.numOfItems - 1
     }));
-    console.log(this.state.items);
   }
   
   render() {
