@@ -10,6 +10,8 @@ import { Route, HashRouter } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import { LoginPage } from './components/LoginPage';
+import { SignupPage } from './components/SignupPage';
 
 export class App extends React.Component {
   
@@ -83,6 +85,12 @@ export class App extends React.Component {
             </Route>
             <Route exact path="/cart">
               <Cart cartItems={this.state.items} total={this.state.total} quantity={this.state.quantity} removeFromCart={this.removeFromCart} increaseQuantity={this.increaseQuantity} decreaseQuantity={this.decreaseQuantity}/>
+            </Route>
+            <Route exact path="/login">
+              <LoginPage />
+            </Route>
+            <Route exact path="/signup">
+              <SignupPage />
             </Route>
         </HashRouter>
         <Footer />

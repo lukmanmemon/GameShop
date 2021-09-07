@@ -44,6 +44,9 @@ export const Header = (props) => {
                             </button>
                         </Link>
                         </div>
+                        <Link to="/login" style={{ textDecoration: 'none' }} className="same-line">Login</Link>
+                        <Link to="/signup" style={{ textDecoration: 'none' }} className="same-line">Register</Link>
+
                     </header> 
                 </div> 
                 );
