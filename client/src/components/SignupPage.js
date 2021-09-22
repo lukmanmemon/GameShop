@@ -2,27 +2,24 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 export const SignupPage = () => {
+    
     return (
         <div id="login-section">
-        <div class="container">
-            <div id="login-content">
+        <div className="container">
+            <div className="login-content">
             <form id="login-form">
                 <h3 id="welcome-title">Register</h3>
-                <div class="label-input-div">
-                    <h5 id="firstName">First Name</h5>
-                    <input type="text" class="input"/>
+                <div className="label-input-div">
+                    <h5 id="firstName">Full Name</h5>
+                    <input type="text" className="input"/>
                 </div>
-                <div class="label-input-div">
-                    <h5 id="lastName">Last Name</h5>
-                    <input type="text" class="input"/>
-                </div>
-                <div class="label-input-div">
+                <div className="label-input-div">
                     <h5 id="email">Email</h5>
-                    <input type="text" class="input"/>
+                    <input type="text" className="input"/>
                 </div>
-                <div class="label-input-div">
+                <div className="label-input-div">
                     <h5 id="password">Password</h5>
-                    <input type="password" class="input"/>
+                    <input type="password" className="input"/>
                 </div>
                 <input type="submit" id="login-btn" value="Create account"/>
                 <button type="submit" id="google-btn">
