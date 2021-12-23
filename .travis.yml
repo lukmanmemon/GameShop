@@ -3,7 +3,9 @@ node_js:
 - 14
 cache: npm
 
-install: skip
+install: 
+- cd client
+- npm ci
 
 script:
 - cd client
