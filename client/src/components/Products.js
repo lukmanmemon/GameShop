@@ -36,7 +36,7 @@ export class Products extends React.Component {
                 <h5 id="product-name">{this.props.name}</h5>
                 <p> ${this.props.price}.00</p>
                 <div id="product-action">
-                    <button id="add-button" style={{backgroundColor: this.state.buttonColor, color: this.state.textColor}} onClick={this.addAction}>Add to Cart</button>
+                    <button id="add-button" data-testid="button-color-test" style={{backgroundColor: this.state.buttonColor, color: this.state.textColor}} onClick={this.addAction}>Add to Cart</button>
                 </div>
             </div>
         );

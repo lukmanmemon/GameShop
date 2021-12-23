@@ -15,10 +15,10 @@ export const Header = (props) => {
                     </div>
                     <div className="same-line" id="header-total">
                     <p className="same-line" id="totalLabel">Total: </p>
-                    <p className="same-line" id="total">${props.total}.00</p>
+                    <p className="same-line" id="total" data-testid="total-test">${props.total}.00</p>
                     <Link to="/cart" href="/Gameshop/cart">
                         <button className="same-line" id="cart-button"><i className="fa fa-shopping-cart"></i>
-                        <Badge bg="secondary">{props.numOfItems}</Badge>
+                        <Badge bg="secondary" data-testid="num-of-items">{props.numOfItems}</Badge>
                         </button>
                     </Link>
                     </div>
@@ -38,14 +38,12 @@ export const Header = (props) => {
                         </div>
                         <div className="same-line" id="header-total">
                         <p className="same-line" id="totalLabel">Total: </p>
-                        <p className="same-line" id="total">${props.total}.00</p>
+                        <p className="same-line" id="total" data-testid="button-total-test">${props.total}.00</p>
                         <Link to="/cart" href="/Gameshop/cart">
                             <button className="same-line" id="cart-button"><i className="fa fa-shopping-cart"></i>
                             </button>
                         </Link>
                         </div>
-                        <Link to="/login" style={{ textDecoration: 'none' }} className="same-line">Login</Link>
-                        <Link to="/signup" style={{ textDecoration: 'none' }} className="same-line">Register</Link>
 
                     </header> 
                 </div> 
