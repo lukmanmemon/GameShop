@@ -7,13 +7,10 @@ install: skip
 
 script: skip
 
-before_deploy:
-- cd client
-
 deploy:
   provider: pages
   skip_cleanup: true
   github-token: $GITHUB_TOKEN
-  local-dir: build
+  local-dir: client/build
   on:
     branch: main
