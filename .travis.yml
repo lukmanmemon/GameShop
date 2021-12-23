@@ -7,6 +7,9 @@ install: skip
 
 script: skip
 
+before_deploy:
+- cd client
+
 deploy:
   provider: pages
   skip_cleanup: true
