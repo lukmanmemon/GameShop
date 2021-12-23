@@ -8,7 +8,6 @@ install:
 - npm ci
 
 script:
-- cd client
 - npm test
 - npm run build
 
