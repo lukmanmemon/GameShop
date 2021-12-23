@@ -18,6 +18,8 @@ export class App extends React.Component {
     items: [],
     numOfItems: 0
   };
+
+  // Get stored application data on startup
   componentDidMount() {
     localStorage.getItem('total') && this.setState({
       total: JSON.parse(localStorage.getItem('total'))
@@ -32,6 +34,7 @@ export class App extends React.Component {
     });
   }
 
+  // Update the stored data values on update
   componentDidUpdate() {
     localStorage.setItem('total', JSON.stringify(this.state.total));
     localStorage.setItem('numberOfItems', JSON.stringify(this.state.numOfItems));
