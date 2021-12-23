@@ -5,9 +5,12 @@ cache: npm
 
 install: skip
 
+before_script:
+- cd client
 
 script:
 - npm test
+- npm run build
 
 deploy:
   provider: pages
